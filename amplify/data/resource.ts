@@ -10,9 +10,16 @@ const schema = a.schema({
   Todo: a
     .model({
       content: a.string(),
+      username: a.string(),
+      dateadded: a.datetime(),
     })
     .authorization((allow) => [allow.publicApiKey()]),
-});
+  Student: a.model({
+    name: a.string(),
+    age: a.integer(),
+    email: a.string(),
+  }).authorization((allow) => [allow.publicApiKey()]),
+  });
 
 export type Schema = ClientSchema<typeof schema>;
 
@@ -26,6 +33,8 @@ export const data = defineData({
     },
   },
 });
+
+
 
 /*== STEP 2 ===============================================================
 Go to your frontend source code. From your client-side code, generate a
