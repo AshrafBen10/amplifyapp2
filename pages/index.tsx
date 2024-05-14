@@ -38,9 +38,9 @@ export default function App() {
 
   return (
     <Authenticator>
-      {({ signOut, user }) => (
+    {({ user, signOut }) => (  
     <main>
-      <h1>My todos asldkjaslkdhalsdk </h1>
+      <h1>My todos </h1>
       <h1>Hello {user?.signInDetails?.loginId} </h1>
       <button onClick={signOut}>Sign out</button>
       <br />
@@ -58,7 +58,8 @@ export default function App() {
         </a>
       </div>
     </main>
-      )}
+    )}
     </Authenticator>
+    
   );
 }

@@ -5,6 +5,10 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body>
+        <header style={{ textAlign: "center" }}>
+          <h1>REI todolist</h1>
+          <div>Welcome to my todolist application!</div>
+        </header>
         <Main />
         <NextScript />
       </body>

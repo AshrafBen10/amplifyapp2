@@ -14,11 +14,12 @@ const schema = a.schema({
       dateadded: a.datetime(),
     })
     .authorization((allow) => [allow.publicApiKey()]),
-  Student: a.model({
-    name: a.string(),
-    age: a.integer(),
-    email: a.string(),
-  }).authorization((allow) => [allow.publicApiKey()]),
+    Student: a.model({
+      name: a.string(),
+      age: a.integer(),
+      email: a.string(),
+      address: a.string()
+    }).authorization((allow) => [allow.publicApiKey()]),
   });
 
 export type Schema = ClientSchema<typeof schema>;
